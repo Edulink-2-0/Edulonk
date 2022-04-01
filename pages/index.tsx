@@ -1,4 +1,5 @@
 import Styled from "styled-components";
+import { Button } from "@mantine/core";
 
 const Root = Styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const Root = Styled.div`
 export default function Home() {
   return (
     <Root>
-      <h1>Harvey Waz 'ere</h1>;
+      <Button>Ping Harvey</Button>
     </Root>
   );
 }
