@@ -7,8 +7,8 @@ function Navbar() {
     <Group position="apart">
       <Text size="xl" gradient={{ from: "indigo", to: "cyan", deg: 45 }} variant="gradient">EDULONK</Text>
       <Group>
-        <Button>Login</Button>
-        <Button>Register</Button>
+        <Button variant="outline">Login</Button>
+        <Button variant="outline">Register</Button>
       </Group>
     </Group>
   </Header>
@@ -20,8 +20,8 @@ function MainCard() {
       <Text gradient={{ from: "indigo", to: "cyan", deg: 45 }} variant="gradient" style={{ fontSize: 64 }} align="center">Welcome to Edulonk</Text>
       <Text color="gray" size="xl" align="center" pb="lg">Enhancing Education</Text>
       <Group position={"center"}>
-        <Button>Login</Button>
-        <Button>Register</Button>
+        <Button variant="outline">Login</Button>
+        <Button variant="outline">Register</Button>
       </Group>
     </Card>
   </Box>
