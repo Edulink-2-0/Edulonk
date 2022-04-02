@@ -1,7 +1,7 @@
 import Styled from "styled-components";
 import { AppShell, Header, Text, Button, Group, Box, Card, SimpleGrid, ActionIcon } from "@mantine/core";
-import { Book, AlertTriangle, Calendar } from "tabler-icons-react"
- 
+import { Book, AlertTriangle, Calendar, Star, Hourglass, BallFootball, Mail } from "tabler-icons-react"
+
 function Navbar() {
   return <Header height={60} p="sm">
     <Group position="apart">
@@ -13,7 +13,7 @@ function Navbar() {
     </Group>
   </Header>
 }
- 
+
 function MainCard() {
   return <Box>
     <Card>
@@ -26,7 +26,7 @@ function MainCard() {
     </Card>
   </Box>
 }
- 
+
 export default function Home() {
   return (
     <AppShell
@@ -69,7 +69,7 @@ export default function Home() {
       <SimpleGrid cols={3} mt="md">
         <Card>
           <Group position="center">
-            <Book size={40} color="#00FF00" />
+            <Star size={40} color="#00FF00" />
             <Button variant="outline">
               <Text gradient={{ from: "green", to: "cyan", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Housepoints</Text>
             </Button>
@@ -79,7 +79,7 @@ export default function Home() {
         </Card>
         <Card>
           <Group position="center">
-            <AlertTriangle size={40} color="#00FFFF" />
+            <Mail size={40} color="#00FFFF" />
             <Button variant="outline">
               <Text gradient={{ from: "cyan", to: "blue", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Email</Text>
             </Button>
@@ -89,7 +89,7 @@ export default function Home() {
         </Card>
         <Card>
           <Group position="center">
-            <Calendar size={40} color="#0000FF" />
+            <BallFootball size={40} color="#0000FF" />
             <Button variant="outline">
               <Text gradient={{ from: "blue", to: "violet", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Clubs</Text>
             </Button>
@@ -101,7 +101,7 @@ export default function Home() {
        
         <Group position='center'><Text p="lg"></Text></Group>
       </SimpleGrid>
- 
+
     </AppShell>
   );
 }
