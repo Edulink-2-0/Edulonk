@@ -1,195 +1,113 @@
-import Styled from "styled-components";
-import { AppShell, Header, Text, Button, Group, Box, Card, SimpleGrid, ActionIcon } from "@mantine/core";
-import { Book, AlertTriangle, Calendar, Star, Hourglass, BallFootball, Mail, Pinned, Certificate, Link, CalendarEvent, ReportAnalytics  } from "tabler-icons-react";
-
-
-function Navbar() {
-  return <Header height={60} p="sm">
-    <Group position="apart">
-      <Text size="xl" gradient={{ from: "indigo", to: "cyan", deg: 45 }} variant="gradient">EDULONK</Text>
-      <Group>
-        <Button variant="outline">Login</Button>
-        <Button variant="outline">Register</Button>
-      </Group>
-    </Group>
-  </Header>
-}
-
-function MainCard() {
-  return <Box>
-    <Card>
-      <Text gradient={{ from: "indigo", to: "cyan", deg: 45 }} variant="gradient" style={{ fontSize: 64 }} align="center">Welcome to Edulonk</Text>
-      <Text color="gray" size="xl" align="center" pb="lg">Enhancing Education</Text>
-      <Group position={"center"}>
-        <Button variant="outline">Login</Button>
-        <Button variant="outline">Register</Button>
-      </Group>
-    </Card>
-  </Box>
-}
+import HomepageGrid from '../components/homepage/homepageGrid';
+import { AppShell, SimpleGrid } from '@mantine/core';
+import {
+    Book,
+    AlertTriangle,
+    Calendar,
+    Star,
+    Hourglass,
+    BallFootball,
+    Mail,
+    Pinned,
+    Certificate,
+    Link,
+    CalendarEvent,
+    ReportAnalytics,
+} from 'tabler-icons-react';
+import Navbar from '../components/global/navbar';
+import MainCard from '../components/global/MainCard';
 
 export default function Home() {
-  return (
-    
-    <AppShell
-      styles={(theme) => ({
-        main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
-      })}
-      header={<Navbar />}>
-      <MainCard />
-      <SimpleGrid cols={3} mt="md">
-        <Card>
-          <Group position="center">
-            <Book size={40} color="#FF0000" />
-            <Button variant="outline">
-              <Text gradient={{ from: "red", to: "orange", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Homework</Text>
-            </Button>
-           
-          </Group>
-          <Group position="center">
-            <Text p="lg">Check what homework you have coming up soon.</Text>
-          </Group>
-          
-        </Card>
-        <Card>
-          <Group position="center">
-            <AlertTriangle size={40} color="#FFA500" />
-            <Button variant="outline">
-              <Text gradient={{ from: "orange", to: "yellow", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Behaviour</Text>
-            </Button>
-           
-          </Group>
-          <Group position="center">
-          <Text p="lg">Check if you have any detentions or behavior points.</Text>
-          </Group>
-        </Card>
-        <Card>
-          <Group position="center">
-            <Calendar size={40} color="#FFFF00" />
-            <Button variant="outline">
-              <Text gradient={{ from: "yellow", to: "green", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Timetable</Text>
-            </Button>
-          </Group>
-          <Group position="center">
-          <Text p="lg">See what lessons you have throughout the day.</Text>
-          </Group>
-        </Card>
-      </SimpleGrid>
-      <SimpleGrid cols={3} mt="md">
-        <Card>
-          <Group position="center">
-            <Star size={40} color="#00FF00" />
-            <Button variant="outline">
-              <Text gradient={{ from: "green", to: "cyan", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Housepoints</Text>
-            </Button>
-           
-          </Group>
-          <Group position="center">
-          <Text p="lg">Check how many houspoints you have been given.</Text>
-          </Group>
-        </Card>
-        <Card>
-          <Group position="center">
-            <Mail size={40} color="#00FFFF" />
-            <Button variant="outline">
-              <Text gradient={{ from: "cyan", to: "blue", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Email</Text>
-            </Button>
-           
-          </Group>
-          <Group position="center">
-          <Text p="lg">See if you have any emails or send one.</Text>
-          </Group>
-        </Card>
-        <Card>
-          <Group position="center">
-            <BallFootball size={40} color="#0000FF" />
-            <Button variant="outline">
-              <Text gradient={{ from: "blue", to: "violet", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Clubs</Text>
-            </Button>
-          </Group>
-          <Group position="center">
-          <Text p="lg">Check if you have any clubs on.</Text>
-          </Group>
-        </Card>
-      </SimpleGrid>
-      <SimpleGrid cols={3} mt="md">
-        <Card>
-          <Group position="center">
-            <Hourglass size={40} color="#8F00FF" />
-            <Button variant="outline">
-              <Text gradient={{ from: "violet", to: "blue", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Attendance</Text>
-              
-            </Button>
-          </Group>
-          <Group position="center">
-          <Text p="lg">Check how many days you have been absent.</Text>
-          </Group>
-        </Card>
-        <Card> 
-          <Group position="center">
-            <Pinned size={40} color="#0000FF" />
-            <Button variant="outline">
-              <Text gradient={{ from: "blue", to: "cyan", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Noticeboard</Text>
-            </Button>
-          </Group>
-          <Group position="center">
-          <Text p="lg">Check what notices you have on the noticeboard.</Text>
-          </Group>
-        </Card>
-        <Card>
-          <Group position="center">
-            <Certificate size={40} color="#00FFFF" />
-            <Button variant="outline">
-              <Text gradient={{ from: "cyan", to: "green", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Exams</Text>
-            </Button>
-          </Group>
-          <Group position="center">
-          <Text p="lg">Check what exams you have passed or have coming up</Text>
-          </Group>
-        </Card>
-        
+    return (
+        <AppShell
+            styles={(theme) => ({
+                main: {
+                    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+                },
+            })}
+            header={<Navbar />}
+        >
+            <MainCard />
+            <SimpleGrid cols={3} mt="md">
+                <HomepageGrid
+                    Title={'Homework'}
+                    Description={'Check what homework you have coming up soon.'}
+                    colour={{ from: 'violet', to: 'blue' }}
+                >
+                    <Book size={40} color="#FF0000" />
+                </HomepageGrid>
+                <HomepageGrid
+                    Title={'Behaviour'}
+                    Description={'Check if you have any detentions or behavior points.'}
+                    colour={{ from: 'orange', to: 'yellow' }}
+                >
+                    <AlertTriangle size={40} color="#FF0000" />
+                </HomepageGrid>
 
-      </SimpleGrid>
-      <SimpleGrid cols={3} mt="md">
-        <Card>
-          <Group position="center">
-            <CalendarEvent size={40} color="#00FF00" />
-            <Button variant="outline">
-              <Text gradient={{ from: "green", to: "yellow", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Calendar</Text>
-            </Button>
-          </Group>
-          <Group position="center">
-          <Text p="lg">Check what events you have coming up.</Text>
-          </Group>
-        </Card>
-        <Card>
-          <Group position="center">
-            <Link size={40} color="#FFFF00" />
-            <Button variant="outline">
-              <Text gradient={{ from: "yellow", to: "orange", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Links</Text>
-            </Button>
-          </Group>
-          <Group position="center">
-            <Text p="lg">Links to other resources.</Text>
-          </Group>
-        </Card>
-        <Card>
-          <Group position="center">
-            <ReportAnalytics size={40} color="#FFA500" />
-            
-              <Button variant="outline">
-                <Text gradient={{ from: "orange", to: "red", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Profile</Text>
-              </Button>
-          </Group>
-          <Group position="center">
-          <Text p="lg">Check your profile.</Text>
-          </Group>
-        </Card>
-      </SimpleGrid>
-      
-      
-      
-      
-    </AppShell>
-  );
+                <HomepageGrid
+                    Title={'Timetable'}
+                    Description={'See what lessons you have throughout the day.'}
+                    colour={{ from: 'yellow', to: 'green' }}
+                >
+                    <Calendar size={40} color="#FF0000" />
+                </HomepageGrid>
+            </SimpleGrid>
+            <SimpleGrid cols={3} mt="md">
+                <HomepageGrid
+                    Title={'Housepoints'}
+                    Description={'Check how many houspoints you have been given.'}
+                    colour={{ from: 'green', to: 'cyan' }}
+                >
+                    <Star size={40} color="#00FF00" />
+                </HomepageGrid>
+
+                <HomepageGrid Title={'Email'} Description={'See if you have any emails or send one.'} colour={{ from: 'cyan', to: 'blue' }}>
+                    <Mail size={40} color="#00FFFF" />
+                </HomepageGrid>
+
+                <HomepageGrid Title={'Clubs'} Description={'Check if you have any clubs on.'} colour={{ from: 'cyan', to: 'blue' }}>
+                    <BallFootball size={40} color="#0000FF" />
+                </HomepageGrid>
+            </SimpleGrid>
+            <SimpleGrid cols={3} mt="md">
+                <HomepageGrid
+                    Title={'Attendance'}
+                    Description={'Check how many days you have been absent.'}
+                    colour={{ from: 'violet', to: 'blue' }}
+                >
+                    <Hourglass size={40} color="#8F00FF" />
+                </HomepageGrid>
+                <HomepageGrid
+                    Title={'Noticeboard'}
+                    Description={'Check what notices you have on the noticeboard.'}
+                    colour={{ from: 'blue', to: 'cyan' }}
+                >
+                    <Pinned size={40} color="#0000FF" />
+                </HomepageGrid>
+                <HomepageGrid
+                    Title={'Exams'}
+                    Description={'Check what exams you have passed or have coming up.'}
+                    colour={{ from: 'cyan', to: 'green' }}
+                >
+                    <Certificate size={40} color="#00FFFF" />
+                </HomepageGrid>
+            </SimpleGrid>
+            <SimpleGrid cols={3} mt="md">
+                <HomepageGrid
+                    Title={'Calendar'}
+                    Description={'Check what events you have coming up.'}
+                    colour={{ from: 'green', to: 'yellow' }}
+                >
+                    <CalendarEvent size={40} color="#00FF00" />
+                </HomepageGrid>
+                <HomepageGrid Title={'Links'} Description={'Links to other resources.'} colour={{ from: 'green', to: 'yellow' }}>
+                    <Link size={40} color="#FFFF00" />
+                </HomepageGrid>
+
+                <HomepageGrid Title={'Profile'} Description={'Check your profile.'} colour={{ from: 'orange', to: 'red' }}>
+                    <ReportAnalytics size={40} color="#FFA500" />
+                </HomepageGrid>
+            </SimpleGrid>
+        </AppShell>
+    );
 }
