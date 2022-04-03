@@ -1,6 +1,6 @@
 import Styled from "styled-components";
 import { AppShell, Header, Text, Button, Group, Box, Card, SimpleGrid, ActionIcon } from "@mantine/core";
-import { Book, AlertTriangle, Calendar, Star, Hourglass, BallFootball, Mail } from "tabler-icons-react"
+import { Book, AlertTriangle, Calendar, Star, Hourglass, BallFootball, Mail, Pinned, Certificate } from "tabler-icons-react"
 
 function Navbar() {
   return <Header height={60} p="sm">
@@ -97,11 +97,40 @@ export default function Home() {
           <Text p="lg">Check if you have any clubs on.</Text>
         </Card>
       </SimpleGrid>
-      <SimpleGrid cols={1} mt="md">
-       
-        <Group position='center'><Text p="lg"></Text></Group>
-      </SimpleGrid>
+      <SimpleGrid cols={3} mt="md">
+        <Card>
+          <Group position="center">
+            <Hourglass size={40} color="#FF00FF" />
+            <Button variant="outline">
+              <Text gradient={{ from: "violet", to: "pink", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Attendance</Text>
+              
+            </Button>
+          </Group>
+          <Text p="lg">Check how many days you have been absent.</Text>
+        </Card>
+        <Card> 
+          <Group position="center">
+            <Pinned size={40} color="#FF00FF" />
+            <Button variant="outline">
+              <Text gradient={{ from: "pink", to: "magenta", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Noticeboard</Text>
+            </Button>
+          </Group>
+          <Text p="lg">Check what notices you have on the noticeboard.</Text>
+        </Card>
+        <Card>
+          <Group position="center">
+            <Certificate size={40} color="#FF00FF" />
+            <Button variant="outline">
+              <Text gradient={{ from: "Magenta", to: "red", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Exams</Text>
+            </Button>
+          </Group>
+          <Text p="lg">Check what exams you have passed or have coming up</Text>
+        </Card>
+        
 
+      </SimpleGrid>
+      
+      
     </AppShell>
   );
 }
