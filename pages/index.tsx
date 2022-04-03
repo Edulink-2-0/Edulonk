@@ -1,6 +1,7 @@
 import Styled from "styled-components";
 import { AppShell, Header, Text, Button, Group, Box, Card, SimpleGrid, ActionIcon } from "@mantine/core";
-import { Book, AlertTriangle, Calendar, Star, Hourglass, BallFootball, Mail, Pinned, Certificate } from "tabler-icons-react"
+import { Book, AlertTriangle, Calendar, Star, Hourglass, BallFootball, Mail, Pinned, Certificate, Link, CalendarEvent, ReportAnalytics  } from "tabler-icons-react";
+
 
 function Navbar() {
   return <Header height={60} p="sm">
@@ -102,7 +103,7 @@ export default function Home() {
           <Group position="center">
             <Hourglass size={40} color="#FF00FF" />
             <Button variant="outline">
-              <Text gradient={{ from: "violet", to: "pink", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Attendance</Text>
+              <Text gradient={{ from: "violet", to: "blue", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Attendance</Text>
               
             </Button>
           </Group>
@@ -112,7 +113,7 @@ export default function Home() {
           <Group position="center">
             <Pinned size={40} color="#FF00FF" />
             <Button variant="outline">
-              <Text gradient={{ from: "pink", to: "magenta", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Noticeboard</Text>
+              <Text gradient={{ from: "blue", to: "cyan", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Noticeboard</Text>
             </Button>
           </Group>
           <Text p="lg">Check what notices you have on the noticeboard.</Text>
@@ -121,7 +122,7 @@ export default function Home() {
           <Group position="center">
             <Certificate size={40} color="#FF00FF" />
             <Button variant="outline">
-              <Text gradient={{ from: "Magenta", to: "red", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Exams</Text>
+              <Text gradient={{ from: "cyan", to: "green", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Exams</Text>
             </Button>
           </Group>
           <Text p="lg">Check what exams you have passed or have coming up</Text>
@@ -129,7 +130,37 @@ export default function Home() {
         
 
       </SimpleGrid>
-      
+      <SimpleGrid cols={3} mt="md">
+        <Card>
+          <Group position="center">
+            <CalendarEvent size={40} color="#FF00FF" />
+            <Button variant="outline">
+              <Text gradient={{ from: "green", to: "yellow", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Calendar</Text>
+            </Button>
+          </Group>
+          <Text p="lg">Check what events you have coming up.</Text>
+        </Card>
+        <Card>
+          <Group position="center">
+            <Link size={40} color="#FF00FF" />
+            <Button variant="outline">
+              <Text gradient={{ from: "yellow", to: "orange", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Links</Text>
+            </Button>
+          </Group>
+          <Text p="lg">Links to other resources.</Text>
+        </Card>
+        <Card>
+          <Group position="center">
+            <ReportAnalytics size={40} color="#FF00FF" />
+            <Button variant="outline">
+              <Text gradient={{ from: "orange", to: "red", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Attendance</Text>
+            </Button>
+          </Group>
+          <Text p="lg">Check what attendance you have.</Text>
+        </Card>
+      </SimpleGrid>
+      <SimpleGrid cols={3} mt="md">
+      </SimpleGrid>
       
     </AppShell>
   );
