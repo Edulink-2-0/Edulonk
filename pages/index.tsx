@@ -30,6 +30,7 @@ function MainCard() {
 
 export default function Home() {
   return (
+    
     <AppShell
       styles={(theme) => ({
         main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
@@ -45,7 +46,10 @@ export default function Home() {
             </Button>
            
           </Group>
-          <Text p="lg">Check what homework you have coming up soon.</Text>
+          <Group position="center">
+            <Text p="lg">Check what homework you have coming up soon.</Text>
+          </Group>
+          
         </Card>
         <Card>
           <Group position="center">
@@ -55,7 +59,9 @@ export default function Home() {
             </Button>
            
           </Group>
+          <Group position="center">
           <Text p="lg">Check if you have any detentions or behavior points.</Text>
+          </Group>
         </Card>
         <Card>
           <Group position="center">
@@ -64,7 +70,9 @@ export default function Home() {
               <Text gradient={{ from: "yellow", to: "green", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Timetable</Text>
             </Button>
           </Group>
+          <Group position="center">
           <Text p="lg">See what lessons you have throughout the day.</Text>
+          </Group>
         </Card>
       </SimpleGrid>
       <SimpleGrid cols={3} mt="md">
@@ -76,7 +84,9 @@ export default function Home() {
             </Button>
            
           </Group>
+          <Group position="center">
           <Text p="lg">Check how many houspoints you have been given.</Text>
+          </Group>
         </Card>
         <Card>
           <Group position="center">
@@ -86,7 +96,9 @@ export default function Home() {
             </Button>
            
           </Group>
+          <Group position="center">
           <Text p="lg">See if you have any emails or send one.</Text>
+          </Group>
         </Card>
         <Card>
           <Group position="center">
@@ -95,37 +107,45 @@ export default function Home() {
               <Text gradient={{ from: "blue", to: "violet", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Clubs</Text>
             </Button>
           </Group>
+          <Group position="center">
           <Text p="lg">Check if you have any clubs on.</Text>
+          </Group>
         </Card>
       </SimpleGrid>
       <SimpleGrid cols={3} mt="md">
         <Card>
           <Group position="center">
-            <Hourglass size={40} color="#FF00FF" />
+            <Hourglass size={40} color="#8F00FF" />
             <Button variant="outline">
               <Text gradient={{ from: "violet", to: "blue", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Attendance</Text>
               
             </Button>
           </Group>
+          <Group position="center">
           <Text p="lg">Check how many days you have been absent.</Text>
+          </Group>
         </Card>
         <Card> 
           <Group position="center">
-            <Pinned size={40} color="#FF00FF" />
+            <Pinned size={40} color="#0000FF" />
             <Button variant="outline">
               <Text gradient={{ from: "blue", to: "cyan", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Noticeboard</Text>
             </Button>
           </Group>
+          <Group position="center">
           <Text p="lg">Check what notices you have on the noticeboard.</Text>
+          </Group>
         </Card>
         <Card>
           <Group position="center">
-            <Certificate size={40} color="#FF00FF" />
+            <Certificate size={40} color="#00FFFF" />
             <Button variant="outline">
               <Text gradient={{ from: "cyan", to: "green", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Exams</Text>
             </Button>
           </Group>
+          <Group position="center">
           <Text p="lg">Check what exams you have passed or have coming up</Text>
+          </Group>
         </Card>
         
 
@@ -133,34 +153,42 @@ export default function Home() {
       <SimpleGrid cols={3} mt="md">
         <Card>
           <Group position="center">
-            <CalendarEvent size={40} color="#FF00FF" />
+            <CalendarEvent size={40} color="#00FF00" />
             <Button variant="outline">
               <Text gradient={{ from: "green", to: "yellow", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Calendar</Text>
             </Button>
           </Group>
+          <Group position="center">
           <Text p="lg">Check what events you have coming up.</Text>
+          </Group>
         </Card>
         <Card>
           <Group position="center">
-            <Link size={40} color="#FF00FF" />
+            <Link size={40} color="#FFFF00" />
             <Button variant="outline">
               <Text gradient={{ from: "yellow", to: "orange", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Links</Text>
             </Button>
           </Group>
-          <Text p="lg">Links to other resources.</Text>
+          <Group position="center">
+            <Text p="lg">Links to other resources.</Text>
+          </Group>
         </Card>
         <Card>
           <Group position="center">
-            <ReportAnalytics size={40} color="#FF00FF" />
-            <Button variant="outline">
-              <Text gradient={{ from: "orange", to: "red", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Attendance</Text>
-            </Button>
+            <ReportAnalytics size={40} color="#FFA500" />
+            
+              <Button variant="outline">
+                <Text gradient={{ from: "orange", to: "red", deg: 45 }} variant="gradient" style={{ fontSize: 26 }} align="center">Profile</Text>
+              </Button>
           </Group>
-          <Text p="lg">Check what attendance you have.</Text>
+          <Group position="center">
+          <Text p="lg">Check your profile.</Text>
+          </Group>
         </Card>
       </SimpleGrid>
-      <SimpleGrid cols={3} mt="md">
-      </SimpleGrid>
+      
+      
+      
       
     </AppShell>
   );
