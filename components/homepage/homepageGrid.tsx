@@ -24,8 +24,8 @@ export default function HomepageGrid({
                 <Button variant="outline">
                     <Text
                         gradient={{
-                            from,
-                            to,
+                            from: to,
+                            to: from,
                             deg: 45,
                         }}
                         variant="gradient"
