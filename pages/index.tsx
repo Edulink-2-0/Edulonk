@@ -1,3 +1,4 @@
+
 import HomepageGrid from '../components/homepage/homepageGrid';
 import { AppShell, SimpleGrid } from '@mantine/core';
 import {
@@ -26,7 +27,7 @@ export default function Home() {
                 },
             })}
             header={<Navbar />}
-        >
+        >   
             <MainCard />
             <SimpleGrid cols={3} mt="md">
                 <HomepageGrid

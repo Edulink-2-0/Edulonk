@@ -1,4 +1,7 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
 import { Box, Button, Card, Group, Text } from '@mantine/core';
+import Link from 'next/link'
 
 export default function MainCard() {
     return (
@@ -11,8 +14,8 @@ export default function MainCard() {
                     Enhancing Education
                 </Text>
                 <Group position={'center'}>
-                    <Button variant="outline">Login</Button>
-                    <Button variant="outline">Register</Button>
+                    <Link passHref={true} href="/login"><Button variant="outline">Login</Button></Link>
+                    <Link passHref={true} href="/signup"><Button variant="outline">Register</Button></Link>
                 </Group>
             </Card>
         </Box>

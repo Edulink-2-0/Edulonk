@@ -24,7 +24,7 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/_document.jsx"
-  ],
+, "pages/login.js"  ],
   "exclude": [
     "node_modules"
   ]

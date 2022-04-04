@@ -1,4 +1,6 @@
 import { Button, Group, Header, Text } from '@mantine/core';
+import { NavLink } from 'react-router-dom';
+import Link from 'next/link'
 
 export default function Navbar() {
     return (
@@ -8,8 +10,9 @@ export default function Navbar() {
                     EDULONK
                 </Text>
                 <Group>
-                    <Button variant="outline">Login</Button>
-                    <Button variant="outline">Register</Button>
+                    
+                    <Link passHref={true} href="/login"><Button variant="outline">Login</Button></Link>
+                    <Link passHref={true} href="/signup"><Button variant="outline">Register</Button></Link>
                 </Group>
             </Group>
         </Header>
