@@ -63,11 +63,13 @@ export default function Login() {
                                     }}
                                 />
                             </div>
-                            <Link passHref={true} href="/">
+                           
                                 <button className="form__button" type="submit">
-                                    Continue
+                                  <Link passHref={true} href="/login">  
+                                  Continue
+                                    </Link>
                                 </button>
-                            </Link>
+
                             <p className="form__text">
                                 <a href="#" className="form__link">
                                     Forgot your password?
