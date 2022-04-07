@@ -8,6 +8,12 @@ import { At, Lock } from 'tabler-icons-react';
 export default function Login() {
     const [emailUsername, setemailUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessages, setErrorMessages] = useState({});
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const renderErrorMessage = (name) =>
+    name === errorMessages.name && (
+      <div className="error">{errorMessages.message}</div>
+    );
 
     return (
         <AppShell
@@ -26,40 +32,31 @@ export default function Login() {
             </Head>
             <MantineProvider theme={{ colorScheme: 'light' }}>
                   <Group position="center">
-                    <Card position="center">
+                 
                     <body>
                       <div className="container">
                           <form className="form" id="login">
                               <h1 className="form__title">Login</h1>
                               <div className="form__message form__message--error"></div>
-                              <div className="form__input-group">
+                              <div className="input-container">
+                                  <label>Username </label>
                                   <Input
-                                      placeholder="Username or email"
-                                      required
-                                      onChange={(e) => {
-                                          setemailUsername(e.target.value);
-                                      }}
-                                      icon={<At />}
-                                  />
+                                     type="text" name="uname" required />
+                                  {renderErrorMessage("uname")}
+                                  
+                                  
   
-                                  <div className="form__input-error-message"></div>
+                                  
                               </div>
-                              <div className="form__input-group">
-                                  <PasswordInput
-                                      icon={<Lock />}
-                                      placeholder="Password"
-                                      required
-                                      onChange={(e) => {
-                                          setPassword(e.target.value);
-                                      }}
-                                  />
-                                  <div className="form__input-error-message"></div>
+                              <div className="input-container">
+                                  <label>Password </label>
+                                <input type="password" name="pass" required/>
+                                {renderErrorMessage("pass")}
                               </div>
                               
-                                  <button className="form__button" type="submit" border={true}>
-                                    <Link passHref={true} href="/">  
-                                    Continue</Link>
-                                  </button>
+                                  <div className="button-container">
+                                    <input type="submit" />
+                                  </div>
                               
                               <p className="form__text">
                                   <a href="#" className="form__link">
@@ -72,7 +69,7 @@ export default function Login() {
                           </form>
                       </div>
                   </body>
-                    </Card>
+                   
                   </Group>
             </MantineProvider>
         </AppShell>
